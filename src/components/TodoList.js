@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-import Greeting from './Greeting';
-import Nav from './Nav';
 import Todo from './Todo';
 import TodoForm from "./TodoForm"
 
@@ -40,8 +38,6 @@ function TodoList() {
 
   return (
     <div>
-      <Nav/>
-      <Greeting/>
       <h1>Assignments needed to graduate</h1>
       <TodoForm onSubmit={addTodo}/>
       <Todo todos={todos} completeTodo={completeTodo} 

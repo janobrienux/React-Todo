@@ -22,16 +22,15 @@ export class Greeting extends React.Component {
     const { hour, username } = this.state;
     return (
       <div className="App">
-        <h2>{hour < 12 ? `Good Morning ${username}` : `Good evening ${username}`}</h2>
+        <h2 style={styles.greeting}>{hour < 12 ? `Good Morning ${username}` : `Good evening ${username}`}</h2>
       </div>
     );
   }
 }
-export function TaskGreeting(props) {
-  const todoList = props.todoList;
-  let greetingMessage = todoList === 3 ? "You have a few task to complete" : "You have lots of tasks to complete";
-
-  return <p>{greetingMessage}</p>;
-}
-
 export default Greeting;
+
+const styles = {
+  greeting:{
+    color:"#6B4E71"
+  }
+}
