@@ -44,12 +44,12 @@ const Clock = () => {
 
   return (
     <>
-      <section style={styles.container}>
+      <section className="clock-body">
         <section style={styles.text}>
-          <span>
+          <span className="container" style={styles.container}>
             <BsClockHistory style={styles.icon} />
             <h1 style={styles.text}>Countdown to Graduation</h1>
-            <p>All of your hard work is paying off, here's to completing something BIG!</p>
+            <p style={styles.text}>All of your hard work is paying off, here's to completing something BIG!</p>
           </span>
         </section>
         <div style={styles.timer}>
@@ -80,13 +80,21 @@ const Clock = () => {
 export default Clock;
 
 const styles = {
+  container: {
+    display:"flex",
+    flexDirection:"column",
+
+    alignItems:"center",
+  },
   icon: {
     width: "30%",
     height: "30%",
     color: "#e2e2e2",
+    
   },
   text: {
-    color: "#e2e2e2",
+    textAlign:"center",
+    color: "#6B4E71",
   },
   timer: {
     display:"flex",
@@ -96,6 +104,7 @@ const styles = {
     borderRadius: "4px",
     textAlign:"center",
     margin:"3em",
-    padding:"3em"
+    padding:"3em",
+    color:"#6B4E71",
   },
 };
