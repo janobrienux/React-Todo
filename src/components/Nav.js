@@ -1,5 +1,6 @@
 import React, {useState}from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components"
 
 import profileImg from "../images/avatar.jpg";
 
@@ -8,39 +9,36 @@ function Nav(props) {
     user: "January O'Brien",
     avatar: profileImg,
   }})
+  const UnorderedList = styled.ul`
+    display:flex;
+    justify-content:space-evenly;
+    list-style:none;`
+  const Avatar = styled.img`
+    margin: 1%;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;`
+  const LinkStyle = styled.li`
+  color:"#6B4E71";`  
   
+  
+
 
   return (
     <nav >
-      <ul style={styles.container}>
-        <li>
-          <Link style={styles.link} to="/">Dashboard</Link>
-        </li>
-        <li>
-          <Link style={styles.link}to="/list">Todo List</Link>
-        </li>
-      <img style={styles.avatar} alt="january" src={profileImg}></img>
-      </ul>
+      <UnorderedList>
+        <LinkStyle>
+          <Link to="/">Dashboard</Link>
+        </LinkStyle>
+        <LinkStyle>
+          <Link to="/list">Todo List</Link>
+        </LinkStyle>
+      <Avatar alt="january" src={profileImg}/>
+      </UnorderedList>
     </nav>
   );
 }
 
 export default Nav;
 
-const styles = {
-  container: {
-    display:"flex",
-    justifyContent:"space-evenly",
-    listStyle:"none",
-  
-  },
-  link: {
-    color:"#6B4E71",
-  },
-  avatar: {
-    margin: "1%",
-    width: "10%",
-    height: "10%",
-    borderRadius: "50%",
-  },
-};
+

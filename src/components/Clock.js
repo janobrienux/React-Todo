@@ -83,7 +83,6 @@ const styles = {
   container: {
     display:"flex",
     flexDirection:"column",
-
     alignItems:"center",
   },
   icon: {
@@ -103,7 +102,7 @@ const styles = {
     border: "solid white 2px",
     borderRadius: "4px",
     textAlign:"center",
-    margin:"3em",
+    margin:"10%",
     padding:"3em",
     color:"#6B4E71",
   },
